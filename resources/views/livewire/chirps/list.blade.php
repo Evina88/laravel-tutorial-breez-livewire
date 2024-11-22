@@ -82,6 +82,9 @@ new class extends Component {
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown>
+                <x-dropdown-link wire:click="delete({{ $chirp->id }})" wire:confirm="Are you sure to delete this chirp?">
+                    {{ __('Delete') }}
+                </x-dropdown-link>
                 @endif
             </div>
             @if ($chirp->is($editing))
