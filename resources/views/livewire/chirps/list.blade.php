@@ -41,6 +41,15 @@ new class extends Component {
 
         $this->getChirps();
     }
+
+    public function delete(Chirp $chirp): void
+    {
+        $this->authorize('delete', $chirp);
+
+        $chirp->delete();
+
+        $this->getChirps();
+    }
 }; ?>
 
 <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
