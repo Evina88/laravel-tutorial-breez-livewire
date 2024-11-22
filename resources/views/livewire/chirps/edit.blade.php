@@ -40,10 +40,7 @@ new class extends Component {
         ></textarea>
 
         <x-input-error :messages="$errors->get('message')" class="mt-2" />
-        <x-primary-button class="mt-4">
-        {
-    { __('Save') }
-        }</x-primary-button>
+        <x-primary-button class="mt-4">{{ __('Save') }}</x-primary-button>
         <button class="mt-4" wire:click.prevent="cancel">Cancel</button>
-        </form>
+    </form>
 </div>
